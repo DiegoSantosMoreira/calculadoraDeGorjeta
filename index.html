@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script src="operation.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <div class="mainDiv">
+        
+   
+    <div class="calculatorDiv">
+      <h3 id="h3">Calculadora de Gorjeta</h3>
+        <label>
+            <strong>Consumo</strong>
+            <p id="screen"></p>
+        </label>
+        <label>
+            <strong>Gorjeta</strong>
+            <p id="screenGorjeta"></p>
+        </label>
+        <label>
+            <strong>Total a pagar</strong>
+            <p id="screenTotal"></p>
+        </label>
+        <table>
+            <tr>
+                <td colspan="2"> <button onclick="apagarTudo()" class="button" style="width: 107px;">C</button></td>
+                <td colspan="2"> <button onclick="voltar()" class="button" style="width: 107px;"><<</button></td>
+                <td colspan="2"> <button onclick="inserir('9')" class="button" style="width: 107px;">9</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button onclick="inserir('6')" class="button" style="width: 107px;">6</button></td>
+                <td colspan="2"> <button onclick="inserir('7')" class="button" style="width: 107px;">7</button></td>
+                <td colspan="2"> <button onclick="inserir('8')" class="button" style="width: 107px;">8</button></td>
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="2"> <button onclick="inserir('3')" class="button" style="width: 107px;">3</button></td>
+                <td colspan="2"> <button onclick="inserir('4')" class="button"style="width: 107px;">4</button></td>
+                <td colspan="2"> <button onclick="inserir('5')" class="button" style="width: 107px;">5</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button onclick="inserir('0')" class="button" style="width: 107px;">0</button></td>
+                <td colspan="2"> <button onclick="inserir('1')" class="button" style="width: 107px;">1</button></td>
+                <td colspan="2"> <button onclick="inserir('2')" class="button" style="width: 107px;">2</button></td>
+                
+            </tr>
+            <tr>
+                <td colspan="5"> <button onclick="inserir('.')" class="button" style="width: 100px;">,</button></td>
+            </tr>
+        
+        </table>
+       
+    </div>    
+    <div class="tableBotaoGorjeta">
+        <table>
+            <td> <button onclick="calcular10()" class="buttonTip" style="width: 400px;">10% de Gorjeta</button></td>
+            <td> <button onclick="calcular15()" class="buttonTip"style="width: 400px;">15% de Gorjeta</button></td>
+            <td> <button onclick="calcular20()" class="buttonTip" style="width: 400px;">20% de Gorjeta</button></td>
+        </table>
+    </div>
+</div>
+</body>
+</html>
