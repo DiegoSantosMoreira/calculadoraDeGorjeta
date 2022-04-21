@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="viewport" content="user-scalable=no">
     <title>Tip Calculator</title>
-    <script src="operation.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="calcgorjeta.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="calcgorjeta.css"/>
 </head>
 <body>
     <div class="mainDiv">
@@ -20,7 +20,7 @@
             <p id="screen"></p>
         </label>
         <label>
-            <strong>Gorjeta</strong>
+            <strong>Valor gorjeta</strong>
             <p id="screenGorjeta"></p>
         </label>
         <label>
@@ -29,41 +29,63 @@
         </label>
         <table>
             <tr>
-                <td colspan="2"> <button onclick="apagarTudo()" class="button" style="width: 107px;">C</button></td>
-                <td colspan="2"> <button onclick="voltar()" class="button" style="width: 107px;"><<</button></td>
-                <td colspan="2"> <button onclick="inserir('9')" class="button" style="width: 107px;">9</button></td>
+                <td colspan="2"> <button onclick="apagarTudo()" class="newButton" style="width: 107px;"><strong>C</strong></button></td>
+                <td colspan="2"> <button onclick="voltar()" class="newButton" style="width: 107px;"><strong>←</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('.')" class="button" style="width: 107px;"><strong>,</strong></button></td>
             </tr>
             <tr>
-                <td colspan="2"> <button onclick="inserir('6')" class="button" style="width: 107px;">6</button></td>
-                <td colspan="2"> <button onclick="inserir('7')" class="button" style="width: 107px;">7</button></td>
-                <td colspan="2"> <button onclick="inserir('8')" class="button" style="width: 107px;">8</button></td>
+                <td colspan="2"> <button onclick="inserir('7')" class="button" style="width: 107px;"><strong>7</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('8')" class="button" style="width: 107px;"><strong>8</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('9')" class="button" style="width: 107px;"><strong>9</strong></button></td>
             </tr>
             </tr>
             <tr>
-                <td colspan="2"> <button onclick="inserir('3')" class="button" style="width: 107px;">3</button></td>
-                <td colspan="2"> <button onclick="inserir('4')" class="button"style="width: 107px;">4</button></td>
-                <td colspan="2"> <button onclick="inserir('5')" class="button" style="width: 107px;">5</button></td>
+                <td colspan="2"> <button onclick="inserir('4')" class="button" style="width: 107px;"><strong>4</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('5')" class="button"style="width: 107px;"><strong>5</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('6')" class="button" style="width: 107px;"><strong>6</strong></button></td>
             </tr>
             <tr>
-                <td colspan="2"> <button onclick="inserir('0')" class="button" style="width: 107px;">0</button></td>
-                <td colspan="2"> <button onclick="inserir('1')" class="button" style="width: 107px;">1</button></td>
-                <td colspan="2"> <button onclick="inserir('2')" class="button" style="width: 107px;">2</button></td>
+                <td colspan="2"> <button onclick="inserir('1')" class="button" style="width: 107px;"><strong>1</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('2')" class="button" style="width: 107px;"><strong>2</strong></button></td>
+                <td colspan="2"> <button onclick="inserir('3')" class="button" style="width: 107px;"><strong>3</strong></button></td>
                 
             </tr>
             <tr>
-                <td colspan="5"> <button onclick="inserir('.')" class="button" style="width: 100px;">,</button></td>
+                
+                <td colspan=""> <button onclick="inserir('0')" class="button" style="width: 100px;"><strong>0</strong></button></td>
             </tr>
         
         </table>
+        <div>
+            <h3 style="margin:2px;">Gorjeta</h3>
+        </div>
+        <div>
+            <button onclick="calcular10()" class="buttonTip" style="width: 340px;"><strong>10%</strong></button>
+        </div>
+        <di>
+            <button onclick="calcular15()" class="buttonTip"style="width: 340px;"><strong>15%</strong></button>
+        </di>
+        <div>
+            <button onclick="calcular20()" class="buttonTip" style="width: 340px;"><strong>20%</strong></button>
+        </div>
        
-    </div>    
-    <div class="tableBotaoGorjeta">
-        <table>
-            <td> <button onclick="calcular10()" class="buttonTip" style="width: 400px;">10% de Gorjeta</button></td>
-            <td> <button onclick="calcular15()" class="buttonTip"style="width: 400px;">15% de Gorjeta</button></td>
-            <td> <button onclick="calcular20()" class="buttonTip" style="width: 400px;">20% de Gorjeta</button></td>
-        </table>
+        <!--</div>    
+        <div class="tableBotaoGorjeta">
+            <table>
+                <td> <button onclick="calcular10()" class="buttonTip" style="width: 400px;">10% de Gorjeta</button></td>
+                <td> <button onclick="calcular15()" class="buttonTip"style="width: 400px;">15% de Gorjeta</button></td>
+                <td> <button onclick="calcular20()" class="buttonTip" style="width: 400px;">20% de Gorjeta</button></td>
+            </table
+        <div>
+            <button onclick="calcular10()" class="buttonTip" style="width: 400px;">10% de Gorjeta</button>
+        </div>
+        <di>
+            <button onclick="calcular15()" class="buttonTip"style="width: 400px;">15% de Gorjeta</button>
+        </di>
+        <div>
+            <button onclick="calcular20()" class="buttonTip" style="width: 400px;">20% de Gorjeta</button>
+        </div>-->
     </div>
-</div>
+    </div>
 </body>
 </html>
