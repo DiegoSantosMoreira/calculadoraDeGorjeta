@@ -3,9 +3,9 @@
     padding: 0;
 }
 .mainDiv{
-    background-image: url('./images/restaurante.JPG') no-repeat center center;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
+    background-image: url('./images/restaurante.JPG') no-repeat;
+    background-size:cover;
+   
     top: 50%;
     right: 50%;
     height: 100vh;
