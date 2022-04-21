@@ -4,6 +4,9 @@ function inserir(vlr){
 }
 function apagarTudo(){
     document.getElementById('screen').innerHTML = "";
+    document.getElementById('screenGorjeta').innerHTML = "";
+    document.getElementById('screenTotal').innerHTML = "";
+    
 }
 function voltar(){
     var numero = document.getElementById('screen').innerHTML;
