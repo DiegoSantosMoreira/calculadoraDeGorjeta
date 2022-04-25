@@ -123,10 +123,10 @@
     align-items: center;
 }
 .newButton:hover{
-    background-color: rgb(255,127,0);
+    background-color: rgb(255,228,196);
 }
 #div{
-    background: no-repeat center/cover url('./image/restaurante.JPG');
+    background: no-repeat center/cover url('./image/back.png');
     opacity: 0.9;
 }
 #header{
@@ -152,13 +152,20 @@
     margin: 30px;
     
 }
-
-#numeroPessoas{
-    margin: 5px;
-    margin-left: 95px ;
-    color:black;
-    background-color: white;
-    border-radius: 30px;
-    width: 50%;
-    position: left 50%;
+#numero1{
+    border-radius: 5px;
+    margin: 3px;
+    border: solid black 1px;
+    text-align: center;
+    height: 30px;
+    font-size: 15px;
+    width: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#numero1::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
+#numero1{
+    -moz-appearance: textfield;
 }
