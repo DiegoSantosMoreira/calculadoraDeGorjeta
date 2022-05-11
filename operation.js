@@ -37,7 +37,13 @@ function calcular10(){
         var numero2 = parseFloat(document.getElementById('screenGorjeta').innerHTML);
         document.getElementById('screenTotal').innerHTML = (numero + numero2).toFixed(2);
     }else{
-        alert("Defina o consumo antes!")
+        //alert("Defina o consumo antes!")
+        Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Você esqueceu de colocar o consumo!',
+  
+})
     }
 }
 function calcular15(){
