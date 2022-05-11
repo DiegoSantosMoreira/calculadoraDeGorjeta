@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 function calcularValorPessoa(){
 var numeroPessoa = document.getElementById('numero1').value;
     if(numeroPessoa)
