@@ -8,6 +8,7 @@
     <meta name="viewport" content="user-scalable=no">
     <title>Tip Calculator</title>
     <script src="operation.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -79,13 +80,13 @@
                     <label>
                         <strong>N° de Pessoas</strong>
                     </label>
-                   
+                
                 </div>
                 <div>
                     <input type="number"id="numero1">
                 </div>
                 <div style="margin-left: 35%;">
-                    <button onclick="calcularValorPessoa()" class="newButton"
+                    <button id="calcularValorPessoa" class="newButton"
                                 style="width: 110px;">Calcular</button>
                 </div>
                 
@@ -104,19 +105,85 @@
                     <h3 style="margin:2px;">Gorjeta</h3>
                 </div>
                 <div>
-                    <button onclick="calcular10()" class="buttonTip" style="width: 340px;"><strong>10%</strong></button>
+                    <button id="calcular10" class="buttonTip" style="width: 340px;"><strong>10%</strong></button>
                 </div>
                 <di>
-                    <button onclick="calcular15()" class="buttonTip" style="width: 340px;"><strong>15%</strong></button>
+                    <button id="calcular15" class="buttonTip" style="width: 340px;"><strong>15%</strong></button>
                 </di>
                 <div>
-                    <button onclick="calcular20()" class="buttonTip" style="width: 340px;"><strong>20%</strong></button>
+                    <button id="calcular20" class="buttonTip" style="width: 340px;"><strong>20%</strong></button>
                 </div>
 
             </div>
         </div>
     </div>
-
+    <script>
+        document.getElementById('calcular10').addEventListener('click',function calcular10(){
+        var numero = parseFloat(document.getElementById('screen').innerHTML);
+        if(numero)
+        {
+            document.getElementById('screenGorjeta').innerHTML = eval(numero * 0.1).toFixed(2);
+            var numero2 = parseFloat(document.getElementById('screenGorjeta').innerHTML);
+            document.getElementById('screenTotal').innerHTML = (numero + numero2).toFixed(2);
+        }else{
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Você esqueceu de definir o consumo!'
+            })
+            
+        }
+    })
+    document.getElementById('calcular15').addEventListener('click',function calcular15(){
+        var numero = parseFloat(document.getElementById('screen').innerHTML);
+        if(numero)
+        {
+            document.getElementById('screenGorjeta').innerHTML = eval(numero * 0.15).toFixed(2);
+            var numero2 = parseFloat(document.getElementById('screenGorjeta').innerHTML);
+            document.getElementById('screenTotal').innerHTML = (numero + numero2).toFixed(2);
+        }else{
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Você esqueceu de definir o consumo!'
+            })
+            
+        }
+    })
+    document.getElementById('calcular20').addEventListener('click',function calcular20(){
+        var numero = parseFloat(document.getElementById('screen').innerHTML);
+        if(numero)
+        {
+            document.getElementById('screenGorjeta').innerHTML = eval(numero * 0.2).toFixed(2);
+            var numero2 = parseFloat(document.getElementById('screenGorjeta').innerHTML);
+            document.getElementById('screenTotal').innerHTML = (numero + numero2).toFixed(2);
+        }else{
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Você esqueceu de definir o consumo!'
+            })
+            
+        }
+    })
+    document.getElementById('calcularValorPessoa').addEventListener('click',function calcularValorPessoa(){
+    var numeroPessoa = document.getElementById('numero1').value;
+        if(numeroPessoa)
+        {
+            var gorjeta = document.getElementById('screenGorjeta').innerHTML;
+            var vlrTotal = document.getElementById('screenTotal').innerHTML;
+            document.getElementById('p1').innerHTML = eval(gorjeta/numeroPessoa).toFixed(2);
+            document.getElementById('p2').innerHTML = eval(vlrTotal/numeroPessoa).toFixed(2);
+        }else{
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Você esqueceu de definir o número de pessoas!'
+            })
+            
+        }
+    })
+    </script>
 </body>
 
 </html>
