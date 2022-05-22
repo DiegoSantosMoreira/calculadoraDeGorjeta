@@ -1,4 +1,3 @@
-}
 function inserir(vlr){
     var numero = document.getElementById('screen').innerHTML;
     document.getElementById('screen').innerHTML = numero + vlr;
